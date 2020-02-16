@@ -3,10 +3,10 @@
 --Ejemplo mayorRectangulo (1,2) (1,3) == (1,3)
 
 
+	mayorRec::(Integral a)=>(a,a)->(a,a)->(a,a)
+	mayorRec (a,b) (c,d)
+		|a*b > c*d = (a,b)
+		|a*b < c*d = (c,d)
+		|otherwise = (a,b)
 
-	vectorCuadrado:: [Int]->[Int]
-	vectorCuadrado []=[]
-	vectorCuadrado [x] = [x*x]
-	vectorCuadrado (x:xs) =(x*x):(vectorCuadrado xs)
-
-	main = print(vectorCuadrado [1,2])
+	main =  print(mayorRec (1,2) (3,4))
